@@ -1,17 +1,43 @@
 <!doctype html>
 <head>
-  <title>Connect 4</title>
+  <title>MindSpark AR Lab</title>
   <link href="connect4.css" rel="stylesheet">
 </head>
 <body>
 
-<input id="p1-color" placeholder="Player 1 color">
-<input id="p2-color" placeholder="Player 2 color">
-<button id="start-game">Start Game!</button>
+<header>
+  <h1>MindSpark AR Lab</h1>
+  <p>Catalog of original AR mind games for memory and attention training.</p>
+</header>
 
-<div id="game">
-  <table id="board"></table>
-</div>
+<section id="catalog">
+  <h2>AR Game Catalog</h2>
+  <div id="catalog-cards"></div>
+</section>
+
+<section id="focus-game" class="panel">
+  <h2>Prototype #1: Echo Trace</h2>
+  <p>
+    Tap the highlighted tiles in sequence, then replay the pattern from memory.
+    This is a 2D prototype of an AR game loop where markers would appear on real-world surfaces.
+  </p>
+  <div class="focus-controls">
+    <button id="start-focus">Start Echo Trace</button>
+    <span id="focus-status">Press start to begin.</span>
+  </div>
+  <div id="focus-grid" aria-label="Echo Trace grid"></div>
+</section>
+
+<section id="classic-connect4" class="panel">
+  <h2>Classic Connect 4 (Existing Mini Game)</h2>
+  <input id="p1-color" placeholder="Player 1 color">
+  <input id="p2-color" placeholder="Player 2 color">
+  <button id="start-game">Start Game!</button>
+
+  <div id="game">
+    <table id="board"></table>
+  </div>
+</section>
 
 <script src="connect4.js"></script>
 

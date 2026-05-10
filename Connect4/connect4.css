@@ -1,4 +1,60 @@
-/* game board table */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  color: #1f2937;
+  background: #f7fafc;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+.panel,
+#catalog {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#catalog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #f9fafb;
+}
+
+.focus-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#focus-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.focus-cell {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  border: 1px solid #9ca3af;
+  background: #eef2ff;
+}
+
+.focus-cell.active {
+  background: #22c55e;
+  box-shadow: 0 0 0 2px #166534 inset;
+}
 
 #board td {
   width: 50px;
@@ -6,16 +62,12 @@
   border: solid 1px #666;
 }
 
-/* pieces are div within game table cells: draw as colored circles */
-
 .piece {
   margin: 5px;
   width: 80%;
   height: 80%;
   border-radius: 50%;
 }
-
-/* column-top is table row of clickable areas for each column */
 
 #column-top td {
   border: dashed 1px lightgray;
